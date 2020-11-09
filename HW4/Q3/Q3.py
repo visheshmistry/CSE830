@@ -39,11 +39,11 @@ while (1):
 
 	num_insertions = num_insertions * 10
 
-plt.plot(dict_insertions, dict_ht_time, label="Dictionary using Hash Table")
-plt.plot(dict_insertions, dict_bt_time, label="Dictionary using Binary Tree")
+plt.plot(dict_insertions, dict_ht_time, label="Dictionary using Hash Table (DHT)")
+plt.plot(dict_insertions, dict_bt_time, label="Dictionary using Binary Tree (DBT)")
 plt.legend()
 plt.xlabel("Number of Insertions (N)")
 plt.xscale("log")
-plt.ylabel("Run-Time of Algorithm (seconds)")
+plt.ylabel("Insertion Time of Algorithm (seconds)")
 # plt.show()
 plt.savefig("Q3.png", dpi=500, bbox_inches="tight")
