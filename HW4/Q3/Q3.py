@@ -18,12 +18,12 @@ num_insertions = 1
 to_break = False
 while (1):
 	dict_insertions.append(num_insertions)
-	ht_value = len(dict_hashtable)
-	bt_value = len(dict_binarytree)
+	dict_hashtable = {}
+	dict_binarytree = OOBTree()
 
 	start = time.monotonic()
 	for i in range(num_insertions):
-		dict_hashtable[ht_value] = str(ht_value)
+		dict_hashtable[i] = str(i)
 	stop = time.monotonic()
 	dict_ht_time.append(stop - start)
 	if (dict_ht_time[-1] > 3):
@@ -31,7 +31,7 @@ while (1):
 
 	start = time.monotonic()
 	for i in range(num_insertions):
-		dict_binarytree.update({ht_value: str(ht_value)})
+		dict_binarytree.update({i: str(i)})
 	stop = time.monotonic()
 	dict_bt_time.append(stop - start)
 	if (to_break or dict_bt_time[-1] > 3):
